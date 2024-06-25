@@ -1,5 +1,52 @@
 * {
-    font-family: arial, sans-serif;
     margin: 0;
     padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: arial, sans-serif;
+}
+
+#jeu {
+    position: relative;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/* Réglages */
+
+#reglages {
+    height: 2rem;
+
+    padding: 0.5rem;
+
+    background: hsl(0, 0%, 19%);
+}
+
+/* Monde */
+
+#monde {
+    background: hsl(140, 76%, 48%);
+}
+
+/* Malette */
+
+#malette {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+
+    transform: translateX(-50%);
+
+    height: 3rem;
+    width: min(12rem, calc(100vw - 2rem));
+
+    padding: 0.5rem;
+
+    background: hsl(350, 81%, 47%);
+    border-radius: 1rem;
 }
