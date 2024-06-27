@@ -53,7 +53,7 @@ button {
     transform: translateX(-50%);
     white-space: nowrap;
     border-radius: 0.5rem;
-   
+    z-index: 1000;
 
     
 
