@@ -1,3 +1,9 @@
+var vitesse_valeur = 1
+document.querySelector("#vitesse").addEventListener("input",() => {
+    vitesse_valeur = document.querySelector("#vitesse").value
+    console.log(vitesse_valeur)
+})
+
 var menu_ouvert = null
 
 document.querySelectorAll(`#malette > nav button`).forEach((bouton) => {
@@ -19,3 +25,4 @@ document.querySelectorAll(`#malette > nav button`).forEach((bouton) => {
         })
     })
 })
+
