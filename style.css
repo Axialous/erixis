@@ -5,6 +5,13 @@
     box-sizing: border-box;
 
     font-family: arial, sans-serif;
+
+    background: none;
+    border: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 #jeu {
@@ -24,29 +31,70 @@
 
     padding: 0.5rem;
 
-    background: hsl(0, 0%, 19%);
+    background: hsl(0, 0%, 20%);
 }
 
 /* Monde */
 
 #monde {
-    background: hsl(140, 76%, 48%);
+    background: hsl(140, 76%, 50%);
 }
 
 /* Malette */
 
 #malette {
     position: absolute;
-    left: 50%;
+    left: 1rem;
     bottom: 1rem;
 
-    transform: translateX(-50%);
-
     height: 3rem;
-    width: min(12rem, calc(100vw - 2rem));
+    width: min(16rem, calc(100vw - 2rem));
 
     padding: 0.5rem;
 
-    background: hsl(350, 81%, 47%);
-    border-radius: 1rem;
+    background: hsl(350, 81%, 50%);
+    border-radius: 0.5rem;
+}
+
+#malette > nav {
+    display: flex;
+
+    gap: 0.5rem;
+}
+
+#malette > nav button {
+    height: 2rem;
+    width: 2rem;
+
+    background: hsl(350, 81%, 60%);
+
+    transition: background 256ms;
+}
+
+#malette > nav button.selectionne {
+    background: hsl(350, 81%, 40%);
+}
+
+#malette .onglet {
+    position: absolute;
+    left: 0;
+    bottom: 2.5rem;
+
+    height: calc(100vh - 6.5rem);
+    width: min(16rem, calc(100vw - 2rem));
+    
+    padding: 0.5rem;
+
+    background: hsl(350, 81%, 50%);
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 256ms;
+}
+
+#malette .onglet.ouvert {
+    opacity: 1;
+    pointer-events: all;
 }
