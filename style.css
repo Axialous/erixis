@@ -19,13 +19,40 @@
 
 /* Réglages */
 
+
 #reglages {
     height: 2rem;
 
     padding: 0.5rem;
 
     background: hsl(0, 0%, 19%);
+
+    display: flex;
+
+
 }
+
+.SW {
+    position: relative;
+}
+
+.SW p {
+    opacity: 0;
+    pointer-events: none;
+    position:absolute;
+    background-color: aliceblue;
+    padding: 0.5rem;
+    left: 50%;
+    top: calc(100% + 0.5rem);
+    transform: translateX(-50%);
+    white-space: nowrap;
+    border-radius: 0.5rem;
+   
+}
+
+.SW:hover p {
+    opacity: 1;
+} 
 
 /* Monde */
 
@@ -49,4 +76,36 @@
 
     background: hsl(350, 81%, 47%);
     border-radius: 1rem;
+}
+
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(to right, #4caf50, #ff5722);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb { /*bulle*/
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff5722; 
+    border-radius: 50%;
+    cursor: pointer;
+    /*margin-top: -3px; */
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem;
+    
 }
